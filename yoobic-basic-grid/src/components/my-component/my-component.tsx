@@ -7,26 +7,28 @@ import { format } from '../../utils/utils';
   shadow: true,
 })
 export class MyComponent {
-  /**
-   * The first name
-   */
-  @Prop() first: string;
 
-  /**
-   * The middle name
-   */
-  @Prop() middle: string;
+  //Declaring main prop as array
+  //Type any because the goal is to print
+  //Numbers - Strings - Objects - mixed Arrays
+  @Prop() array: any[] = undefined
 
-  /**
-   * The last name
-   */
-  @Prop() last: string;
 
-  private getText(): string {
-    return format(this.first, this.middle, this.last);
+  //Prop for letting the component know which field to display
+  //if the array contains objects
+  @Prop() display_key: string = undefined
+
+  //Helper function for creating the list which will be displayed
+  //Different function for Number-String and Objects needed!
+  private outputList() {
+    
   }
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    return (
+      <div>
+        {this.outputList}
+      </div>
+    );
   }
 }
