@@ -26,15 +26,18 @@ export class MyComponent {
 
   format(d: any): HTMLElement {
     let returnValue: any;
-    if (typeof d ==  'number') {
-      returnValue = "number";
-      console.log("is Number");
-    } else if (typeof d == 'string') {
-      returnValue = "string";
-      console.log("is String");
+    if (typeof d == 'number' || typeof d == 'string') {
+      returnValue = d;
     } else {
-      returnValue = "object";
-      console.log("is Object");
+      if (this.display_key) {
+        returnValue = d[this.display_key];
+      } else {
+        returnValue = (<div>
+          <div>Object</div><ul>
+            {Object.keys(d).map(elem => <li>{elem} : {d[elem]}</li>)}
+          </ul>
+        </div>)
+      }
     }
 
     return <li>{returnValue}</li>
