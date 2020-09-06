@@ -6,56 +6,36 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface YoobicBasicGrid {
+        "array": any[];
+        "display_key": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLYoobicBasicGridElement extends Components.YoobicBasicGrid, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLYoobicBasicGridElement: {
+        prototype: HTMLYoobicBasicGridElement;
+        new (): HTMLYoobicBasicGridElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "yoobic-basic-grid": HTMLYoobicBasicGridElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface YoobicBasicGrid {
+        "array"?: any[];
+        "display_key"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "yoobic-basic-grid": YoobicBasicGrid;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "yoobic-basic-grid": LocalJSX.YoobicBasicGrid & JSXBase.HTMLAttributes<HTMLYoobicBasicGridElement>;
         }
     }
 }

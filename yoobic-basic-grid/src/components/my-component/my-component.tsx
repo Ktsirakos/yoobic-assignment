@@ -1,8 +1,6 @@
 import { Component, Prop, h } from '@stencil/core';
-import { format } from '../../utils/utils';
-
 @Component({
-  tag: 'my-component',
+  tag: 'yoobic-basic-grid',
   styleUrl: 'my-component.css',
   shadow: true,
 })
@@ -21,13 +19,19 @@ export class MyComponent {
   //Helper function for creating the list which will be displayed
   //Different function for Number-String and Objects needed!
   private outputList() {
-    
+    let data = [
+      "10", "20", "30", "40"
+    ]
+
+    return data.map((d) => <li key={d}>{d}</li>);
   }
 
   render() {
     return (
       <div>
-        {this.outputList}
+        <ul>
+          {this.outputList()}
+        </ul>
       </div>
     );
   }
