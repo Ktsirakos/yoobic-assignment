@@ -5,14 +5,25 @@ import axios from "axios"
 
 class List extends React.Component {
     state = {
-        starWars: []
+        people: []
     }
 
     componentDidMount() {
-        axios.get(`https://jsonplaceholder.typicode.com/users`)
+        axios.get(`https://swapi.dev/api/people`)
             .then(res => {
-                const persons = res.data;
-                this.setState({ persons });
+                const result = res.data.results
+                const people = result.map((elem: any) => {
+                    return {
+                        name: elem.name,
+                        height: elem.height,
+                        eye_color: elem.eye_color,
+                        mass: elem.mass,
+                        filmsNumber: elem.films.length,
+                        startshipsNumber: elem.starships.length
+                    }
+                })
+
+                this.setState({ people });
             })
     }
 
@@ -29,7 +40,9 @@ class List extends React.Component {
                 </IonHeader>
 
                 <IonContent fullscreen>
-                    
+                    {this.state.people.map((elem:any) => (
+                        <p>{elem.name}</p>
+                    ))}
                 </IonContent>
             </IonPage>
         );
