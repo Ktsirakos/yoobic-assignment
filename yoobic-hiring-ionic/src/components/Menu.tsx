@@ -35,6 +35,12 @@ const appPages: AppPage[] = [
     iosIcon: paperPlaneOutline,
     mdIcon: paperPlaneSharp
   },
+  {
+    title: 'Test',
+    url: '/test',
+    iosIcon: paperPlaneOutline,
+    mdIcon: paperPlaneSharp
+  },
 ];
 
 const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
