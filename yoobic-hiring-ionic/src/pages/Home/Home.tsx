@@ -2,28 +2,30 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
 import React from 'react';
 import './Home.css';
 
-const Home: React.FC = () => {
+class Home extends React.Component {
 
-    return (
-        <IonPage>
-            <IonHeader>
-                <IonToolbar>
-                    <IonButtons slot="start">
-                        <IonMenuButton />
-                    </IonButtons>
-                    <IonTitle>Home</IonTitle>
-                </IonToolbar>
-            </IonHeader>
-
-            <IonContent fullscreen>
-                <IonHeader collapse="condense">
+    render() {
+        return (
+            <IonPage>
+                <IonHeader>
                     <IonToolbar>
-                        <IonTitle size="large">Home</IonTitle>
+                        <IonButtons slot="start">
+                            <IonMenuButton />
+                        </IonButtons>
+                        <IonTitle>Home</IonTitle>
                     </IonToolbar>
                 </IonHeader>
-            </IonContent>
-        </IonPage>
-    );
+
+                <IonContent fullscreen>
+                    <IonHeader collapse="condense">
+                        <IonToolbar>
+                            <IonTitle size="large">Home</IonTitle>
+                        </IonToolbar>
+                    </IonHeader>
+                </IonContent>
+            </IonPage>
+        );
+    }
 };
 
 export default Home;
