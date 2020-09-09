@@ -25,24 +25,33 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import 'yoobic-basic-grid';
 
-const App: React.FC = () => {
+class App extends React.Component {
 
-  return (
-    <IonApp>
-      <IonReactRouter>
-        <IonSplitPane contentId="main">
-          <Menu />
-          <IonRouterOutlet id="main">
-            <Route path="/home" component={Home} exact />
-            <Route path="/list" component={List} exact />
-            <Route path="/test" component={Test} exact />
-            <Redirect from="/" to="/home" exact />
-          </IonRouterOutlet>
-        </IonSplitPane>
-      </IonReactRouter>
-    </IonApp>
-  );
+  componentDidMount() {
+    // const script = document.createElement("script");
+    // script.src = "./node_modules/yoobic-basic-grid/dist/esm/yoobic-basic-grid.js";
+    // script.async = true;
+    // document.body.appendChild(script);
+  }
+  render() {
+    return (
+      <IonApp>
+        <IonReactRouter>
+          <IonSplitPane contentId="main">
+            <Menu />
+            <IonRouterOutlet id="main">
+              <Route path="/home" component={Home} exact />
+              <Route path="/list" component={List} exact />
+              <Route path="/test" component={Test} exact />
+              <Redirect from="/" to="/home" exact />
+            </IonRouterOutlet>
+          </IonSplitPane>
+        </IonReactRouter>
+      </IonApp>
+    );
+  }
 };
 
 export default App;

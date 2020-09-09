@@ -3,7 +3,6 @@ import React from 'react';
 import './List.css';
 import DetailsCard from "../../components/DetailsCard/DetailsCard"
 import axios from "axios"
-import testImage from "../../assets/test.jpg"
 
 class List extends React.Component {
     state = {
@@ -43,20 +42,7 @@ class List extends React.Component {
 
                 <IonContent fullscreen>
                     {this.state.people.map((elem: any) => (
-                        <div className="box">
-                            {/* This will become an avatar component */}
-                            <div className="imgBox">
-                                <img alt="logo" src={testImage} />
-                                <p>{elem["Name"]}</p>
-                            </div>
-
-                            {/* This will be the custom components from StencilJS */}
-                            <div className="contents">
-                                {Object.keys(elem).map((field: any) => (
-                                    <p><strong>{field}</strong>:{elem[field]}</p>
-                                ))}
-                            </div>
-                        </div>
+                        <DetailsCard value={elem} />
                     ))}
                 </IonContent>
             </IonPage>
