@@ -25,8 +25,8 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import 'yoobic-basic-grid';
 
+import "yoobic-basic-grid"
 class App extends React.Component {
 
   componentDidMount() {

@@ -2,8 +2,7 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
 import React from 'react';
 import './DetailsCard.css';
 import testImage from "../../assets/test.jpg"
-import 'yoobic-basic-grid';
-
+import { YoobicBasicGrid } from "yoobic-basic-grid-react/src/components"
 function DetailsCard(props: any) {
   var elem = props.value;
 
@@ -17,7 +16,7 @@ function DetailsCard(props: any) {
 
       {/* This will be the custom components from StencilJS */}
       <div className="contents">
-        <yoobic-basic-grid array={elem}></yoobic-basic-grid>
+        <YoobicBasicGrid array={elem}></YoobicBasicGrid>
         {Object.keys(elem).map((field: any) => (
           field !== 'Name' ?
             <p><strong>{field}</strong>:{elem[field]}</p> : <span></span>

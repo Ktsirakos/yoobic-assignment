@@ -1,0 +1,7 @@
+{
+  "name": "yoobic-hiring-project-angular",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
