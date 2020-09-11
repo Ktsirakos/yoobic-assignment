@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiSerivce } from 'src/services/api-service';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,18 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   array: any = [
-    "Hello" , "World"
+    "Hello", "World"
   ]
-  constructor() {}
+  constructor(
+    private apiService: ApiSerivce
+  ) {
+
+  }
+
+  ngOnInit() {
+    this.apiService.getPeople().then((value: any) => {
+      this.array = value.results;
+    })
+  }
 
 }
