@@ -6,6 +6,20 @@ import { Component, Prop, h } from '@stencil/core';
 })
 export class MyComponent {
 
+  container: HTMLElement;
+  window: Window | any;
+  document: Document | any;
+  root: Element | any;
+  _element: any;
+
+
+  async componentWillLoad() {
+    this.window = window;
+  }
+  componentDidLoad() {
+    console.log("yoobic-basic-grid loaded");
+  }
+
   //Declaring main prop as array
   //Type any because the goal is to print
   //Numbers - Strings - Objects - mixed Arrays
@@ -16,8 +30,8 @@ export class MyComponent {
   //if the array contains objects
   @Prop() display_key: string
 
-  //Helper function for creating the list which will be displayed
-  //Different function for Number-String and Objects needed!
+  //   Helper function for creating the list which will be displayed
+  // Different function for Number - String and Objects needed!
   private outputList() {
     return this.array.map((d) => {
       return this.format(d)
@@ -46,6 +60,7 @@ export class MyComponent {
   render() {
     return (
       <div>
+        {/* <p>Working</p> */}
         <ul>
           {this.outputList()}
         </ul>
