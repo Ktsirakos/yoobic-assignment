@@ -7,7 +7,12 @@ export class ApiSerivce {
 
     }
 
-    //Helper function for making request easily
+    /**
+     * Helper function for making request easily
+     * @param type GET POST
+     * @param url The url which will be used
+     * @param payload optional --- payload for POST
+     */
     makeRequest(type, url, payload = {}) {
         switch (type.toLowerCase()) {
             case "post": {
@@ -24,6 +29,9 @@ export class ApiSerivce {
     }
 
 
+    /**
+     * Function which calls the swapi using the helper function above
+     */
     getPeople() {
         return new Promise((resolve, reject) => {
             this.makeRequest("GET", "https://swapi.dev/api/people")

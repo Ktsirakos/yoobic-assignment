@@ -26,7 +26,7 @@
     "@ionic/angular": "^5.0.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
-    "yoobic-basic-grid": "^0.0.3",
+    "yoobic-details-card": "^0.0.2",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {

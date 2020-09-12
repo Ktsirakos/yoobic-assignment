@@ -14,8 +14,9 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-    <yoobic-basic-grid [array]="array"></yoobic-basic-grid>
+    <yoobic-details-card *ngFor="let char of starwars"
+      image="https://vignette.wikia.nocookie.net/starwars/images/c/cc/Star-wars-logo-new-tall.jpg/revision/latest?cb=20190313021755"
+      [name]="char['Name']" [info]="[char]">
+    </yoobic-details-card>
   </div>
 </ion-content>

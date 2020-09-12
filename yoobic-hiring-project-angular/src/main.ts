@@ -4,7 +4,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
-import { defineCustomElements } from 'yoobic-basic-grid/loader';
+import { defineCustomElements } from 'yoobic-details-card/loader';
 
 // defineCustomElements(window);
 if (environment.production) {
