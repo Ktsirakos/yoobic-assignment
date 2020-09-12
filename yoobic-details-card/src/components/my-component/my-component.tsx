@@ -21,10 +21,13 @@ export class MyComponent {
     console.log("yoobic-details-card loaded");
   }
 
+  //Image prop for displaying on the card
   @Prop() image: string;
 
+  //The name which is displayed as a layover the image
   @Prop() name: string;
 
+  //Info which are displayed in the body
   @Prop() info: any[];
 
   render() {

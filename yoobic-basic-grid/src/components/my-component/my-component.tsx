@@ -59,7 +59,7 @@ export class MyComponent {
 
   render() {
     return (
-      <div>
+      <div class="yoobic-basic-grid-container">
         {this.outputList()}
       </div>
     );

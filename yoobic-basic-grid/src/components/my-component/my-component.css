@@ -1,3 +1,7 @@
 :host {
   display: block;
 }
+
+.yoobic-basic-grid-container {
+  margin: 20px 0;
+}
