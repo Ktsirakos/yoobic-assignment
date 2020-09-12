@@ -10,10 +10,10 @@ export const config: Config = {
     //   componentCorePackage: 'yoobic-basic-grid',
     //   proxiesFile: '../yoobic-basic-grid-react/src/components.ts',
     // }),
-    angularOutputTarget({
-      componentCorePackage: 'yoobic-basic-grid',
-      directivesProxyFile: '../yoobic-library-angular/src/directives/proxies.ts',
-    }),
+    // angularOutputTarget({
+    //   componentCorePackage: 'yoobic-basic-grid',
+    //   directivesProxyFile: '../yoobic-library-angular/src/directives/proxies.ts',
+    // }),
     {
       type: 'dist',
     },
