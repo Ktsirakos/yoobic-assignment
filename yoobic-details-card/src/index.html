@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/yoobic-details-card.esm.js"></script>
+  <script nomodule src="/build/yoobic-details-card.js"></script>
+</head>
+
+<body>
+  <yoobic-details-card
+    image="https://vignette.wikia.nocookie.net/starwars/images/c/cc/Star-wars-logo-new-tall.jpg/revision/latest?cb=20190313021755"
+    name="Luke skywalker">
+  </yoobic-details-card>
+  <script>
+    var elem = document.getElementsByTagName('yoobic-details-card');
+    elem[0].info = [{
+      "name": "Konstantinos Tsirakos",
+      "surname": "Tsirakos Konstantinos",
+      "age": 22
+    }];
+
+  </script>
+</body>
+
+</html>

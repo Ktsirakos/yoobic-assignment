@@ -46,24 +46,21 @@ export class MyComponent {
       if (this.display_key) {
         returnValue = d[this.display_key];
       } else {
-        returnValue = (<div>
-          <div>Object</div><ul>
+        returnValue = (
+          <ul>
             {Object.keys(d).map(elem => <li>{elem} : {d[elem]}</li>)}
           </ul>
-        </div>)
+        )
       }
     }
 
-    return <li>{returnValue}</li>
+    return returnValue
   }
 
   render() {
     return (
       <div>
-        {/* <p>Working</p> */}
-        <ul>
-          {this.outputList()}
-        </ul>
+        {this.outputList()}
       </div>
     );
   }

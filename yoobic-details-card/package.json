@@ -1,15 +1,15 @@
 {
-  "name": "yoobic-basic-grid",
-  "version": "1.0.1",
+  "name": "yoobic-details-card",
+  "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
-  "module": "dist/index.js",
+  "module": "dist/custom-elements/index.js",
   "es2015": "dist/esm/index.mjs",
   "es2017": "dist/esm/index.mjs",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/custom-elements/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/yoobic-basic-grid/yoobic-basic-grid.js",
+  "unpkg": "dist/yoobic-details-card/yoobic-details-card.js",
   "files": [
     "dist/",
     "loader/"
@@ -22,14 +22,8 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^2.0.1"
+    "@stencil/core": "^2.0.1",
+    "yoobic-basic-grid": "^1.0.1"
   },
-  "license": "MIT",
-  "devDependencies": {
-    "@stencil/angular-output-target": "0.0.5",
-    "@stencil/core": "^1.1.0",
-    "@stencil/react-output-target": "0.0.1",
-    "@stencil/sass": "^0.2.1",
-    "@types/node": "^11.11.8"
-  }
+  "license": "MIT"
 }
